@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.3.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "social-media-startup",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganann201/social-media-startup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganann201/social-media-startup/issues"
+  },
+  "homepage": "https://github.com/meganann201/social-media-startup#readme"
+}
