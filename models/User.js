@@ -1,7 +1,8 @@
-const { Schema, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
+const Thought = require('./Thought.js')
 
 const UserSchema = new Schema({
-  // Add these four attributes to your schema: username, password, email, userCreated
+  
   username: {
     type: String,
     required: [true, 'Username is required'],
@@ -18,10 +19,10 @@ const UserSchema = new Schema({
       type: Schema.Types.ObjectId,
       ref: 'Thought'
     }
-  ]
+  ],
+  friends: [this]
 },
   {
-  friends: [this],
   toJSON: {
     virtuals: true,
   },
