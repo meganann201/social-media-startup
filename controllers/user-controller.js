@@ -73,7 +73,7 @@ deleteUser({ params }, res) {
   addFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
-      { $push: { friendId: params.friendId } },
+      { $push: { friends: params.friendId } },
       { new: true, runValidators: true }
     )
       .then(dbUserData => {
@@ -89,7 +89,7 @@ deleteUser({ params }, res) {
    removeFriend({ params }, res) {
     User.findOneAndUpdate(
       { _id: params.userId },
-      { $pull: { friends: { friendId: params.friendId } } },
+      { $pullAll: { friends: [params.friendId] } },
       { new: true }
     )
       .then(dbUserData => res.json(dbUserData))
